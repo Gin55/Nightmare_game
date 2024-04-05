@@ -1,9 +1,9 @@
 [gd_resource type="ShaderMaterial" load_steps=7 format=3 uid="uid://c58s5kw3wh8al"]
 
 [ext_resource type="Shader" path="res://Assets/Materials/style/Stylized_sky.gdshader" id="1_f8tm8"]
-[ext_resource type="Texture2D" uid="uid://bqri3jvsk7kbg" path="res://Assets/Materials/wSx1I.jpg" id="2_8fo2c"]
-[ext_resource type="Texture2D" uid="uid://cm8yrm7tjbgrf" path="res://Assets/Materials/eye_of_sender-removebg-preview.png" id="2_nl6df"]
-[ext_resource type="Texture2D" uid="uid://crsjodsgrrukg" path="res://Assets/Materials/PNdtb.jpg" id="4_bpy77"]
+[ext_resource type="Texture2D" uid="uid://bqri3jvsk7kbg" path="res://Assets/Materials/misc/wSx1I.jpg" id="2_8fo2c"]
+[ext_resource type="Texture2D" uid="uid://cm8yrm7tjbgrf" path="res://Assets/Materials/misc/eye_of_sender-removebg-preview.png" id="2_nl6df"]
+[ext_resource type="Texture2D" uid="uid://crsjodsgrrukg" path="res://Assets/Materials/misc/PNdtb.jpg" id="4_bpy77"]
 
 [sub_resource type="Curve" id="Curve_p5idi"]
 _data = [Vector2(0.179104, 0.857143), 0.0, 0.0, 0, 0, Vector2(0.820895, 0.692308), 0.0, 0.0, 0, 0]
