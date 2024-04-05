@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://dcp7cbqnvuv54"]
+[gd_scene load_steps=16 format=3 uid="uid://dcp7cbqnvuv54"]
 
 [ext_resource type="Material" uid="uid://c58s5kw3wh8al" path="res://Assets/AllSkyFree/AllSkyFree_Skyboxes/AllSkyFree_Environment.tres" id="2_6v2oi"]
 [ext_resource type="PackedScene" uid="uid://ce4erk1ecn6uk" path="res://Scenes/prefab/player.tscn" id="2_j3hap"]
@@ -7,8 +7,10 @@
 [ext_resource type="Script" path="res://addons/zylann.hterrain/hterrain_texture_set.gd" id="6_neeax"]
 [ext_resource type="Texture2D" uid="uid://dk8dca8qka181" path="res://Assets/Materials/Ground/Materials/grass_01.png" id="7_jgcx8"]
 [ext_resource type="Script" path="res://addons/zylann.hterrain/hterrain_detail_layer.gd" id="8_5oxcw"]
+[ext_resource type="Texture2D" uid="uid://dv1qha3r74wgw" path="res://Assets/Materials/Nature/Materials/grass_4.png" id="8_kqhmu"]
 [ext_resource type="Texture2D" uid="uid://6jmdwj3vn6m0" path="res://addons/zylann.hterrain/tools/icons/icon_detail_layer_node.svg" id="9_2k1gv"]
-[ext_resource type="Texture2D" uid="uid://7xwibux1ceu3" path="res://Assets/Materials/Nature/Materials/bush_02.png" id="9_nm6fn"]
+[ext_resource type="Texture2D" uid="uid://chubmyp44tope" path="res://Assets/Materials/Nature/Materials/grass_5.png" id="10_u6d0x"]
+[ext_resource type="Texture2D" uid="uid://c4yjp6njgdx4s" path="res://Assets/Materials/Nature/Materials/grass_6.png" id="11_envjp"]
 
 [sub_resource type="Sky" id="Sky_klus8"]
 sky_material = ExtResource("2_6v2oi")
@@ -28,11 +30,6 @@ albedo_color = Color(0.870588, 0.415686, 0.937255, 1)
 script = ExtResource("6_neeax")
 mode = 0
 textures = [[ExtResource("7_jgcx8")], [null]]
-
-[sub_resource type="RibbonTrailMesh" id="RibbonTrailMesh_cq84f"]
-uv2_padding = 2.1
-size = 3.0
-section_length = 0.7
 
 [node name="world" type="Node3D"]
 
@@ -54,6 +51,8 @@ size = Vector3(1.03711, 0.362305, 0.548706)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(-0.0610486, -0.913253, 0.402792, 0, 0.403545, 0.91496, -0.998135, 0.055857, -0.0246359, 0, 0, 0)
+light_color = Color(0.0666667, 0.6, 0.415686, 1)
+light_energy = 3.612
 shadow_enabled = true
 
 [node name="HTerrain" type="Node3D" parent="."]
@@ -77,11 +76,31 @@ shader_params/u_triplanar = false
 shader_params/u_tile_reduction = Vector4(0, 0, 0, 0)
 shader_params/u_specular = 0.5
 
-[node name="HTerrainDetailLayer" type="Node3D" parent="HTerrain"]
+[node name="@Node3D@62139" type="Node3D" parent="HTerrain"]
 script = ExtResource("8_5oxcw")
-texture = ExtResource("9_nm6fn")
-density = 1.238
-instance_mesh = SubResource("RibbonTrailMesh_cq84f")
+texture = ExtResource("8_kqhmu")
+shader_params/u_globalmap_tint_bottom = null
+shader_params/u_globalmap_tint_top = null
+shader_params/u_bottom_ao = null
+shader_params/u_instance_scale = Vector3(1, 1, 1)
+shader_params/u_roughness = 0.9
+metadata/_editor_icon = ExtResource("9_2k1gv")
+
+[node name="@Node3D@62140" type="Node3D" parent="HTerrain"]
+script = ExtResource("8_5oxcw")
+layer_index = 1
+texture = ExtResource("10_u6d0x")
+shader_params/u_globalmap_tint_bottom = null
+shader_params/u_globalmap_tint_top = null
+shader_params/u_bottom_ao = null
+shader_params/u_instance_scale = Vector3(1, 1, 1)
+shader_params/u_roughness = 0.9
+metadata/_editor_icon = ExtResource("9_2k1gv")
+
+[node name="@Node3D@62141" type="Node3D" parent="HTerrain"]
+script = ExtResource("8_5oxcw")
+layer_index = 2
+texture = ExtResource("11_envjp")
 shader_params/u_globalmap_tint_bottom = null
 shader_params/u_globalmap_tint_top = null
 shader_params/u_bottom_ao = null

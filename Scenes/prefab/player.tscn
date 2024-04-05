@@ -12,8 +12,8 @@ points = PackedVector3Array(-0.125207, -0.532801, -0.480507, 0.0227831, 0.47607,
 render_priority = 3
 shader = ExtResource("2_6lciu")
 shader_parameter/color_depth = 5
-shader_parameter/dithering = true
-shader_parameter/resolution_scale = 4
+shader_parameter/dithering = false
+shader_parameter/resolution_scale = 3
 
 [sub_resource type="QuadMesh" id="QuadMesh_wec86"]
 material = SubResource("ShaderMaterial_rru3o")
