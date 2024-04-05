@@ -1,19 +1,15 @@
-[gd_scene load_steps=9 format=3 uid="uid://dcp7cbqnvuv54"]
+[gd_scene load_steps=8 format=3 uid="uid://dcp7cbqnvuv54"]
 
 [ext_resource type="Texture2D" uid="uid://bhh7auyqoxdpd" path="res://Assets/Materials/Ground/Materials/grass_03.png" id="1_1so16"]
-[ext_resource type="Shader" path="res://Assets/style/sky.gdshader" id="2_hsjbe"]
+[ext_resource type="Material" uid="uid://c58s5kw3wh8al" path="res://Assets/AllSkyFree/AllSkyFree_Skyboxes/AllSkyFree_Environment.tres" id="2_6v2oi"]
 [ext_resource type="PackedScene" uid="uid://ce4erk1ecn6uk" path="res://Scenes/prefab/player.tscn" id="2_j3hap"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1d4ny"]
 albedo_texture = ExtResource("1_1so16")
 uv1_triplanar = true
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_mc4i6"]
-shader = ExtResource("2_hsjbe")
-shader_parameter/skyColor = Color(0.00784314, 0.105882, 0.168627, 1)
-
 [sub_resource type="Sky" id="Sky_klus8"]
-sky_material = SubResource("ShaderMaterial_mc4i6")
+sky_material = ExtResource("2_6v2oi")
 
 [sub_resource type="Environment" id="Environment_6ogbx"]
 background_mode = 2
@@ -27,10 +23,6 @@ volumetric_fog_albedo = Color(0.054902, 0.0235294, 0.227451, 1)
 albedo_color = Color(0.870588, 0.415686, 0.937255, 1)
 
 [node name="world" type="Node3D"]
-
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(-0.0610486, -0.913253, 0.402793, 0, 0.403545, 0.91496, -0.998135, 0.055857, -0.0246359, 0, 0, 0)
-shadow_enabled = true
 
 [node name="CSGBox3D" type="CSGBox3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.226037, 0.0709808, 0.0294199)
@@ -54,3 +46,7 @@ material = SubResource("StandardMaterial3D_h8efp")
 transform = Transform3D(6.6878, 0, 0, 0, 2.92852, 0, 0, 0, 5.55298, 0.0185547, 0.386253, -9.45772)
 use_collision = true
 size = Vector3(1.03711, 0.362305, 0.548706)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.0610486, -0.913253, 0.402792, 0, 0.403545, 0.91496, -0.998135, 0.055857, -0.0246359, 0, 0, 0)
+shadow_enabled = true
