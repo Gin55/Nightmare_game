@@ -42,6 +42,11 @@ func _physics_process(delta):
 	if Input.is_action_just_pressed("jump") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
 	
+	
+	# Handle quiting the Game ERROR BUT IS FUNTIONAL
+	if Input.is_action_just_pressed("quit"):
+		get_tree().queue_free()
+	
 	# Handle Sprint.
 	if Input.is_action_pressed("sprint"):
 		speed = SPRINT_SPEED
@@ -79,3 +84,5 @@ func _headbob(time) -> Vector3:
 	pos.y = sin(time * BOB_FREQ) * BOB_AMP
 	pos.x = cos(time * BOB_FREQ / 2) * BOB_AMP
 	return pos
+	
+
