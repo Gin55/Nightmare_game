@@ -14,10 +14,10 @@ curve = SubResource("Curve_p5idi")
 
 [resource]
 shader = ExtResource("1_f8tm8")
-shader_parameter/clouds_samples = 8
+shader_parameter/clouds_samples = 16
 shader_parameter/shadow_sample = 4
 shader_parameter/clouds_density = 0.5
-shader_parameter/clouds_scale = 1.0
+shader_parameter/clouds_scale = 0.5
 shader_parameter/clouds_smoothness = 0.1
 shader_parameter/clouds_light_color = Color(0, 0.321569, 0.25098, 1)
 shader_parameter/clouds_shadow_intensity = 0.1

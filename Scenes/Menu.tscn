@@ -1,0 +1,49 @@
+[gd_scene load_steps=3 format=3 uid="uid://b3c6y62xr1st4"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_x5ux4"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_pdtws"]
+
+[node name="Menu" type="Control"]
+material = SubResource("ShaderMaterial_x5ux4")
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_pdtws")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 1, 1, 0)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -66.0
+offset_right = 46.0
+grow_vertical = 0
+
+[node name="playbn" type="Button" parent="ColorRect/VBoxContainer"]
+layout_mode = 2
+text = "Start"
+
+[node name="quitbn" type="Button" parent="ColorRect/VBoxContainer"]
+layout_mode = 2
+text = "Quit"
+
+[node name="Label" type="Label" parent="ColorRect"]
+layout_mode = 0
+offset_left = 588.0
+offset_top = 261.0
+offset_right = 672.0
+offset_bottom = 284.0
+text = "Hello word"
