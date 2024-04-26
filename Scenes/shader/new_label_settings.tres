@@ -1,0 +1,7 @@
+[gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://bi4y05g25k2r2"]
+
+[ext_resource type="FontFile" uid="uid://ckoovidlb2u32" path="res://Assets/fonts/LEMONMILK-Regular.otf" id="1_3l1b1"]
+
+[resource]
+font = ExtResource("1_3l1b1")
+font_size = 35

@@ -16,9 +16,13 @@ func _process(delta):
 		press = 1
 
 
-func _on_animation_player_animation_finished(intro):
-	$CharacterBody3D/head/Camera3D.set_current(true)
-
+func _on_animation_player_animation_finished(anim_name):
+	if anim_name == "intro":
+		$CharacterBody3D/head/Camera3D.set_current(true)
+	if anim_name == "transgress":
+		get_tree().change_scene_to_file("res://Scenes/death_screen.tscn")
+	if anim_name == "good":
+		get_tree().quit()
 
 
 func _on_area_3d_body_exited(body):
@@ -27,3 +31,12 @@ func _on_area_3d_body_exited(body):
 		$intro_cam/AnimationPlayer.play("transgress")
 		value = 1 
 	#$CharacterBody3D/head/Camera3D.set_current(true)
+
+
+func _on_kill_vol_body_entered(body):
+	if body.is_in_group("player"):
+		get_tree().change_scene("res://Scenes/death_screen.tscn")
+
+
+func _on_timer_timeout():
+	$intro_cam/AnimationPlayer.play("good")
